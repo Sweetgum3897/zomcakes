@@ -1,8 +1,7 @@
 require("@nomicfoundation/hardhat-toolbox");
-
 require("@nomiclabs/hardhat-waffle");
 require('solidity-coverage');
-const { defaultAlchemyApiKey } = require("@wagmi/core/dist/declarations/src/constants");
+const { ALCHEMY_ID } = require("@wagmi/core/dist/declarations/src/constants");
 /**
 * @type import('hardhat/config').HardhatUserConfig
 */
@@ -15,9 +14,13 @@ module.exports = {
   defaultNetwork: "goerli",
    networks: {
       goerli: {
-         url: "https://eth-goerli.g.alchemy.com/v2/rhhDiOumtYmeouWg7IhhzJqsKl0G-gAu",
+         url: process.env.API_URL,
          defaultAlchemyApiKey: ALCHEMY_ID,
-         accounts: [`0x${PRIVATE_KEY}`]
-      }
-    }
+         accounts: [process.env.PRIVATE_KEY_DEPLOY]
+      },
+    },
+    etherscan: {
+         apiKey: process.env.ETHERSCAN_API,
+    },
 };
+
