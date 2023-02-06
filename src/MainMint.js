@@ -47,10 +47,10 @@ const HandleMint= async () => {
             zomCakes.abi,
             signer
         );
-       try{
-            const response = await contract.mint(BigNumber.from(MintAmount));
+    try{
+            const response = await contract.mint(BigNumber.from(MintAmount), {value: ethers.utils.parseEther(0.0 * MintAmount.toString()), });
             console.log("response: ", response);
-            const ALresponse = await contract.AllowListmint(BigNumber.from(MintAmount));
+            const ALresponse = await contract.AllowListmint(BigNumber.from(MintAmount), {value: ethers.utils.parseEther(0.0 * MintAmount.toString()), });
             console.log("response: ", ALresponse);
         }catch (err){
             console.log("error: ", err)
