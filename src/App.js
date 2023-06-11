@@ -4,7 +4,10 @@ import NavBar from './NavBar.js';
 import MainMint from './MainMint.js';
 import FAQ from './FAQ';
 import Footer from './Footer';
+<<<<<<< HEAD
   window.Buffer = window.Buffer || require("buffer").Buffer;
+=======
+>>>>>>> 0c2e349e6265b04f80dbbed780ebd19940c3a15b
 
 function App() {
 

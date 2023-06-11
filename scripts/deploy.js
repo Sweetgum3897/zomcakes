@@ -8,8 +8,11 @@ async function main() {
    
     console.log("Contract deployed to address:", zomCakes.address);
     await zomCakes.deployed();
+<<<<<<< HEAD
     const receipt = await zomCakes.deployTransaction.wait();
     console.log("gasUsed:" , receipt.gasUsed);
+=======
+>>>>>>> 0c2e349e6265b04f80dbbed780ebd19940c3a15b
   
   }
   
@@ -18,4 +21,8 @@ async function main() {
     .catch((error) => {
       console.error(error);
       process.exit(1);
+<<<<<<< HEAD
     });
+=======
+    });
+>>>>>>> 0c2e349e6265b04f80dbbed780ebd19940c3a15b

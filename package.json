@@ -5,7 +5,10 @@
   "private": true,
   "dependencies": {
     "@openzeppelin/contracts": "^4.8.0",
+<<<<<<< HEAD
     "@openzeppelin/merkle-tree": "^1.0.4",
+=======
+>>>>>>> 0c2e349e6265b04f80dbbed780ebd19940c3a15b
     "@rainbow-me/rainbowkit": "^0.7.4",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -14,9 +17,12 @@
     "erc721a": "^4.2.3",
     "ethers": "^5.7.2",
     "gh-pages": "^5.0.0",
+<<<<<<< HEAD
     "keccak256": "^1.0.6",
     "merkletreejs": "^0.3.10",
     "precompiled-mqtt": "^4.3.14-beta",
+=======
+>>>>>>> 0c2e349e6265b04f80dbbed780ebd19940c3a15b
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.0",
     "react-dom": "^18.2.0",
@@ -25,16 +31,25 @@
     "react-scripts": "5.0.1",
     "styled-components": "^5.3.6",
     "vercel": "^28.15.0",
+<<<<<<< HEAD
     "viem": "^1.0.2",
+=======
+>>>>>>> 0c2e349e6265b04f80dbbed780ebd19940c3a15b
     "wagmi": "^0.7.15",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
+<<<<<<< HEAD
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
+=======
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+>>>>>>> 0c2e349e6265b04f80dbbed780ebd19940c3a15b
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -57,8 +72,12 @@
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^2.0.0",
+<<<<<<< HEAD
     "buffer": "^6.0.3",
     "hardhat": "^2.15.0",
     "react-app-rewired": "^2.2.1"
+=======
+    "hardhat": "^2.12.2"
+>>>>>>> 0c2e349e6265b04f80dbbed780ebd19940c3a15b
   }
 }

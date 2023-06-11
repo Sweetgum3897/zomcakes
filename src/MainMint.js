@@ -1,4 +1,5 @@
 import { useState } from "react";
+<<<<<<< HEAD
 import {addresses, buf2hex} from "./MerkleTreeKW.js"
 import styled from "styled-components";
 import { ethers, BigNumber} from "ethers";
@@ -8,6 +9,14 @@ import zomCakes from './ZomCakes.json';
 
  window.Buffer = window.Buffer || require("buffer").Buffer;
 
+=======
+import styled from "styled-components";
+import { ethers, BigNumber} from "ethers";
+import PMButton from "./AccountButtoncrp.png";
+import MintButton from "./MINTrz.png"
+import zomCakes from './ZomCakes.json';
+
+>>>>>>> 0c2e349e6265b04f80dbbed780ebd19940c3a15b
 const Button = styled.button`
 background-image: url(${PMButton});
 font-family: "Bakso Sapi";
@@ -34,22 +43,35 @@ height: 57px;
 width: 143px;
 `;
 
+<<<<<<< HEAD
 const zomCakesAddress = "0xd8b934580fcE35a11B58C6D73aDeE468a2833fa8";
 
 
 const MainMint = () => {
    
+=======
+const zomCakesAddress = "";
+
+
+
+const MainMint = () => {
+>>>>>>> 0c2e349e6265b04f80dbbed780ebd19940c3a15b
     const [ MintAmount, setMintAmount ] = useState(1);
    
 const HandleMint= async () => {
     if(window.ethereum){
+<<<<<<< HEAD
         const provider = new ethers.providers.Web3Provider(window.ethereum);
+=======
+       const provider = new ethers.providers.Web3Provider(window.ethereum);
+>>>>>>> 0c2e349e6265b04f80dbbed780ebd19940c3a15b
         const signer = provider.getSigner();
         const contract = new ethers.Contract(
             zomCakesAddress,
             zomCakes.abi,
             signer
         );
+<<<<<<< HEAD
         const { MerkleTree } = require('merkletreejs');
         const KECCAK256 = require('keccak256');
         const accounts = await provider.listAccounts();
@@ -65,6 +87,12 @@ const HandleMint= async () => {
             const response = await contract.mint(BigNumber.from(MintAmount), {value: ethers.utils.parseEther(0.0 * MintAmount.toString()), });
             console.log("response: ", response);
             const ALresponse = await contract.AllowListmint(BigNumber.from(MintAmount, proof), {value: ethers.utils.parseEther(0.0 * MintAmount.toString()), from: accounts[0]});
+=======
+    try{
+            const response = await contract.mint(BigNumber.from(MintAmount), {value: ethers.utils.parseEther(0.0 * MintAmount.toString()), });
+            console.log("response: ", response);
+            const ALresponse = await contract.AllowListmint(BigNumber.from(MintAmount), {value: ethers.utils.parseEther(0.0 * MintAmount.toString()), });
+>>>>>>> 0c2e349e6265b04f80dbbed780ebd19940c3a15b
             console.log("response: ", ALresponse);
         }catch (err){
             console.log("error: ", err)
@@ -102,4 +130,8 @@ return(
     );
 };
 
+<<<<<<< HEAD
 export default MainMint;
+=======
+export default MainMint;
+>>>>>>> 0c2e349e6265b04f80dbbed780ebd19940c3a15b

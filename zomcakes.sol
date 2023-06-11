@@ -10,11 +10,7 @@ import "../node_modules/@openzeppelin/contracts/utils/cryptography/MerkleProof.s
 contract ZomCakes is ERC721A, Ownable{
     using Strings for uint256;
 
-<<<<<<< HEAD
     bytes32 public root = 0x65db95bce907178649fa7c289773149343c552dc70d646f84bdfccccd2436d68;
-=======
-    bytes32 public root = '';
->>>>>>> 0c2e349e6265b04f80dbbed780ebd19940c3a15b
     uint256 MintPrice;
     uint256 TotalSupply;
     uint256 MaxSupply;
@@ -71,30 +67,19 @@ function mint(uint256 quantity_) external payable callerIsUser{
     require((TotalSupply + quantity_) <= MaxSupply, 'sold out');
     require((WalletMints[msg.sender] + quantity_) <= maxperWallet, 'exceed max mints for this wallet');
     require(balanceOf(msg.sender) + quantity_ <= maxperWallet, 'wallet cannot mint more than 3 total');
-<<<<<<< HEAD
     TotalSupply ++;
-=======
->>>>>>> 0c2e349e6265b04f80dbbed780ebd19940c3a15b
      _safeMint(msg.sender, quantity_);
 
 }
 
 function AllowListmint(bytes32[] calldata _merkleProof, uint256 quantity_) external payable callerIsUser{
-<<<<<<< HEAD
     require(isValid(_merkleProof, keccak256(abi.encodePacked(msg.sender))), "Not whitelisted");
-=======
-    bytes32 leaf = keccak256(abi.encodePacked(msg.sender));
-    require(MerkleProof.verify(_merkleProof, root, leaf), "Incorrect proof");
->>>>>>> 0c2e349e6265b04f80dbbed780ebd19940c3a15b
     require(AllowListSale, 'minting not currently enabled');
     require(msg.value == quantity_ * MintPrice, 'wrong amount');
     require((TotalSupply + quantity_) <= MaxSupply, 'sold out');
     require(WalletMints[msg.sender] + quantity_ <= maxperWallet, 'exceed max mints for this wallet');
     require(balanceOf(msg.sender) + quantity_ <= maxperWallet, 'wallet cannot mint more than 3 total');
-<<<<<<< HEAD
     TotalSupply ++;
-=======
->>>>>>> 0c2e349e6265b04f80dbbed780ebd19940c3a15b
      _safeMint(msg.sender, quantity_);
 
 }
@@ -102,12 +87,8 @@ function AllowListmint(bytes32[] calldata _merkleProof, uint256 quantity_) exter
 function toggleReveal() external onlyOwner{
         Revealed = true;
 }
-<<<<<<< HEAD
 
 function isValid (bytes32[] memory _merkleProof, bytes32 leaf) public view returns (bool){
     return MerkleProof.verify(_merkleProof, root, leaf);
 }
 }
-=======
-}
->>>>>>> 0c2e349e6265b04f80dbbed780ebd19940c3a15b
