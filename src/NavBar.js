@@ -24,15 +24,10 @@ import {
     Row,
     Collapse,
   } from 'react-bootstrap';
-<<<<<<< HEAD
+
 window.Buffer = window.Buffer || require("buffer").Buffer;
 function NavBar () {
-  
-=======
 
-function NavBar () {
-   
->>>>>>> 0c2e349e6265b04f80dbbed780ebd19940c3a15b
   const CButton = styled.button`
   background-image: url(${ConButton});
   background-position: center;
