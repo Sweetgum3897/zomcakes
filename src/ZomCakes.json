@@ -1,5 +1,5 @@
 {
-<<<<<<< HEAD
+
   "_format": "hh-sol-artifact-1",
   "contractName": "ZomCakes",
   "sourceName": "contracts/zomcakes.sol",
@@ -1347,5 +1347,3 @@
     "linkReferences": {},
     "deployedLinkReferences": {}
   }
-  
->>>>>>> 0c2e349e6265b04f80dbbed780ebd19940c3a15b
