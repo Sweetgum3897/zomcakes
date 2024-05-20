@@ -21,7 +21,7 @@ const { ALCHEMY_ID } = require("@wagmi/core/dist/declarations/src/constants");
 const path = require('path')
 require('dotenv').config({ path: path.resolve(__dirname, './.env') })
 require("@nomiclabs/hardhat-ethers");
->>>>>>> 0c2e349e6265b04f80dbbed780ebd19940c3a15b
+
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
   solidity: "0.8.17",
@@ -33,7 +33,7 @@ module.exports = {
          defaultAlchemyApiKey: process.env.ALCHEMY_ID,
 =======
          defaultAlchemyApiKey: ALCHEMY_ID,
->>>>>>> 0c2e349e6265b04f80dbbed780ebd19940c3a15b
+
          accounts: [process.env.PRIVATE_KEY_DEPLOY]
       },
     },
@@ -44,4 +44,4 @@ module.exports = {
 <<<<<<< HEAD
 =======
 
->>>>>>> 0c2e349e6265b04f80dbbed780ebd19940c3a15b
+
