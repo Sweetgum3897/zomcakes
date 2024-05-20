@@ -10,7 +10,7 @@ import "../node_modules/@openzeppelin/contracts/utils/cryptography/MerkleProof.s
 contract ZomCakes is ERC721A, Ownable{
     using Strings for uint256;
 
-    bytes32 public root = 0x65db95bce907178649fa7c289773149343c552dc70d646f84bdfccccd2436d68;
+    bytes32 public root = ;
     uint256 MintPrice;
     uint256 TotalSupply;
     uint256 MaxSupply;
